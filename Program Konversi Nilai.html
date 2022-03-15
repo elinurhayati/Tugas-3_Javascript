@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<TITLE>Konversi Nilai Angka</TITLE>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</HEAD>
+
+	<SCRIPT LANGUAGE = "JavaScript">
+		//<!- 
+		function test(){
+			var nilai = document.send.A1.value
+			if((nilai>=0) && (nilai<=40)) document.send.A2.value="E";
+			else if ((nilai>=41) && (nilai<=55)) document.send.A2.value ="D";
+			else if ((nilai>=56) && (nilai<=60)) document.send.A2.value="C";
+			else if ((nilai>=61) && (nilai<=65)) document.send.A2.value="BC";
+			else if ((nilai>=66) && (nilai<=70)) document.send.A2.value="B";
+			else if ((nilai>=71) && (nilai<=80)) document.send.A2.value="AB";
+			else if ((nilai>=81) && (nilai<=100)) document.send.A2.value="A";
+			else if (nilai>100) document.send.A2.value="Oops...";
+		}
+		function reset(){
+				document.send.value = "";
+			}
+		//->
+</SCRIPT>
+<BODY>
+	<FORM method="POST" name="send">
+		<div class="container">
+			<div class = "judulkonversi">
+				<text>Konversi Nilai Angka Menjadi Nilai Huruf</text> 
+			</div>
+			<br>
+			<div class="konversi">
+				<b align="middle" font-weight="bold">Silakan Input Nilai (0-100) !</b>
+				<p>NILAI ANGKA : <input type="text" name="A1" size="10"></p> 
+				<p>NILAI HURUF : <input type="text" name="A2" size="10"></p>
+				<input type="button" class="button" value="KONVERSI" name="konversi" onclick=test()> 
+				<input type="button" class="button" value="RESET" onclick="reset()">
+			</div>
+		</div>
+	</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<TITLE>Program Kalkulator Sederhana</TITLE>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</HEAD>
+
+	<SCRIPT LANGUAGE = "JavaScript">
+		//<!- 
+			function plus(){
+				var bil1 = parseFloat(document.calculator.bil1.value);
+				var bil2 = parseFloat(document.calculator.bil2.value);
+				var hasil = bil1+bil2;
+				document.calculator.hasil.value = hasil;
+			}
+			function minus(){
+				var bil1 = parseFloat(document.calculator.bil1.value);
+				var bil2 = parseFloat(document.calculator.bil2.value);
+				var hasil = (bil1-bil2);
+				document.calculator.hasil.value = hasil;
+			}
+			function kali(){
+				var bil1 = parseFloat(document.calculator.bil1.value);
+				var bil2 = parseFloat(document.calculator.bil2.value);
+				var hasil = bil1*bil2;
+				document.calculator.hasil.value = hasil;
+			}
+			function bagi(){
+				var bil1 = parseFloat(document.calculator.bil1.value);
+				var bil2 = parseFloat(document.calculator.bil2.value);
+				var hasil = bil1/bil2;
+				document.calculator.hasil.value = hasil;
+			}
+			function reset(){
+				document.calculator.value = "";
+			}
+			document.write("Dimodifikasi terakhir pada "+ document.lastModified);
+		//->
+	</SCRIPT>
+
+<BODY>
+	<FORM NAME="calculator">
+	<div class= "container">
+		<div class="judul">
+			<text > Program Kalkulator Sederhana Menggunakan Javascript </text> <br>
+		</div>
+		<br>
+		<div class="calc">
+			<table>
+				<tr>
+					<text> BILANGAN 1 : <input type="text" class="textView" name="bil1"></text> <br>
+					<text> BILANGAN 2 : <input type="text" class="textView" name="bil2"></text>
+				</tr>
+				<tr> 
+					<br>
+					<td><input type="button" class="button" value="+" onclick="plus()"></td>
+					<td><input type="button" class="button" value="-" onclick="minus()"></td>
+					<td><input type="button" class="button" value="x" onclick="kali()"></td>
+					<td><input type="button" class="button" value="/" onclick="bagi()"></td>
+				</tr>
+				<tr> 
+					<td><input type="button" class="buttonreset" value="RESET" onclick="reset()"></td>
+				</tr>
+				<tr>
+					<text> HASIL : </text>
+					<text> <input type="text" class="textView" name="hasil"></text> <br>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+	</FORM>
+</BODY>
+</HTML>
